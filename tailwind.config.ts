@@ -8,8 +8,12 @@ export default {
       fontFamily: {
         sans: ["var(--font-montserrat)"],
         poppins: ["var(--font-poppins)"],
+        lato: ["var(--font-lato)"],
       },
       colors: {
+        grayText: "hsl(var(--gray-text))",
+        grayBg: "hsl(var(--gray-bg))",
+        orange: "hsl(var(--orange))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

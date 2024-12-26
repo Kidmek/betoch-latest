@@ -7,14 +7,13 @@ import {
   SearchIcon,
   UserIcon,
 } from "@/constants/images";
-import NavButton from "@/molecules/NavButton";
+import NavButton from "@/components/molecules/NavButton";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 export default function BottomNav() {
   const router = useRouter();
   const location = usePathname();
-  console.log(location);
   const handleButtonClick = (route: string) => {
     router.push(route);
   };
@@ -29,8 +28,8 @@ export default function BottomNav() {
       <NavButton
         Icon={HomeIcon}
         label="Home"
-        selected={location === "/home"}
-        onClick={() => handleButtonClick("/home")}
+        selected={location === "/"}
+        onClick={() => handleButtonClick("/")}
       />
       <NavButton
         Icon={SearchIcon}

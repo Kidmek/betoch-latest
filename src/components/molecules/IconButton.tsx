@@ -1,6 +1,6 @@
 "use client";
 
-import Typography from "@/atoms/Typography";
+import Typography from "@/components/atoms/Typography";
 import React from "react";
 
 interface Props {

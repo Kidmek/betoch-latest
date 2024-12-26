@@ -14,19 +14,25 @@ export default function Dropdown({
 }: Props) {
   return (
     <select
+      className="font-poppins"
       onChange={(e) => onSelect(e.target.value)}
       style={{
-        borderRadius: "0.5rem",
-        padding: "1rem 0.25rem",
         fontSize: "1rem",
+        borderWidth: "1px",
+        borderColor: "var(--primary)",
+        borderRadius: "5px",
+        height: "38px",
+        color: "var(--primary)",
       }}
+      title={`Select ${placeholder}`}
+      value={selected ?? ""}
     >
-      <option value="" disabled selected>
+      <option value="" disabled>
         {placeholder}
       </option>
       {options.map((o) => {
         return (
-          <option value={o} key={o} selected={o === selected}>
+          <option value={o} key={o}>
             {o}
           </option>
         );

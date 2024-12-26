@@ -1,14 +1,14 @@
 "use client";
 
-import Typography from "@/atoms/Typography";
+import Typography from "@/components/atoms/Typography";
 import {
   FacebookIcon,
   GoogleIcon,
   PhoneIcon,
   TelegramIcon,
 } from "@/constants/images";
-import IconButton from "@/molecules/IconButton";
-import PhoneEmailPage from "@/organism/auth/PhoneEmailLogin";
+import IconButton from "@/components/molecules/IconButton";
+import PhoneEmailPage from "@/components/organisms/auth/PhoneEmailLogin";
 import Link from "next/link";
 import React, { useState } from "react";
 

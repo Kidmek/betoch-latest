@@ -1,14 +1,14 @@
 "use client";
 
-import InputField from "@/atoms/InputField";
-import Typography from "@/atoms/Typography";
+import InputField from "@/components/atoms/InputField";
+import Typography from "@/components/atoms/Typography";
 import {
   AuthUserIcon,
   EmailIcon,
   PasswordIcon,
   PhoneIcon,
 } from "@/constants/images";
-import IconButton from "@/molecules/IconButton";
+import IconButton from "@/components/molecules/IconButton";
 import { UsersIcon } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";

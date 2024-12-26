@@ -17,6 +17,7 @@ interface TypographyProps {
   className?: string;
   color?: string;
   align?: "left" | "center" | "right";
+  size?: number;
 }
 
 export default function Typography({
@@ -27,29 +28,35 @@ export default function Typography({
   weight,
   color = "text-black",
   align = "left",
+  size,
 }: TypographyProps) {
-  const style: React.CSSProperties = {};
+  const style: React.CSSProperties = {
+    // letterSpacing: "0.5px",
+  };
   const Tag = tag;
 
-  if (variant === "medium") {
+  if (variant === "large") {
+    style.fontSize = "16px";
+    style.fontWeight = "500";
+  } else if (variant === "medium") {
     style.fontSize = "13px";
-    style.lineHeight = "15.85px";
     style.fontWeight = "500";
   } else if (variant === "xsmall") {
     style.fontSize = "10px";
-    style.lineHeight = "15px";
-    style.letterSpacing = "0.5px";
     style.fontWeight = "400";
   }
 
   if (weight) {
     style.fontWeight = weight;
   }
+  if (size) {
+    style.fontSize = `${size}px`;
+  }
   return (
     <Tag
       className={`${align === "center" ? "text-center" : ""} ${
         align === "right" ? "text-right" : ""
-      } ${className}`}
+      }${className}`}
       style={{
         color,
         ...style,
